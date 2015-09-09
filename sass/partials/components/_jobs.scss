@@ -1,0 +1,29 @@
+.jobs-wrapper{
+  background-image: url(http://www.hdwallpapers.in/walls/curious_kittens-wide.jpg);
+  background-size: cover;
+  color: $c-white;
+  height: 500px;
+  padding: 0 3em;
+  @extend %clearfix;
+
+  .jobs-text-wrapper{
+    @include span(2 of 12);
+    position: relative;
+    z-index: 1;
+
+    .jobs-button a{
+      padding: 1em;
+      color: $c-white;
+      border: solid 1px $c-white;
+    }//.jobs-button
+  }//jobs-text-wrapper
+
+  .jobs-overlay{
+    position: absolute;
+    left: 0;
+  }
+  .polygon{
+    fill: $c-violet;
+
+  }
+}//.jobs-wrapper

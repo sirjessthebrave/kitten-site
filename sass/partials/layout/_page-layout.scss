@@ -1,0 +1,57 @@
+
+body {
+  @include fontsize (16px);
+  @extend %sans-serif;
+}
+
+.container {
+  @include container($mobile);
+    height: 100%;
+    text-align: center;
+    background-color: (#fff);
+
+@include breakpoint ($bp-tiny) {
+  @include container(1280px);  
+  }//bp tiny
+}   //container
+
+li {
+  list-style: none;
+}//li
+
+ul {
+  padding: 0;
+}///ul
+
+p {
+  @extend %sans-serif;
+  @include fontsize(20);  
+  line-height: 1.5;
+}
+
+h1 {
+@extend %heavy;
+@include fontsize(36);
+}
+ h2 {
+  @extend %sans-serif;
+  @include fontsize(48);
+ }
+
+ h3 {
+  @extend %heavy;
+  @include fontsize(20);
+ }
+
+ h4 {
+  @extend %medium;
+  @include fontsize(20);  
+ }
+
+ .all-caps {
+  text-transform: uppercase;
+ }
+
+ .bold {
+  @extend %bold;
+ }

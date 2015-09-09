@@ -1,0 +1,802 @@
+@charset "UTF-8";
+@include border-box-sizing;
+/*! normalize.css v3.0.2 | MIT License | git.io/normalize */
+/**
+ * 1. Set default font family to sans-serif.
+ * 2. Prevent iOS text size adjust after orientation change, without disabling
+ *    user zoom.
+ */
+html {
+  font-family: sans-serif;
+  /* 1 */
+  -ms-text-size-adjust: 100%;
+  /* 2 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
+}
+
+/**
+ * Remove default margin.
+ */
+body {
+  margin: 0;
+}
+
+/* HTML5 display definitions
+   ========================================================================== */
+/**
+ * Correct `block` display not defined for any HTML5 element in IE 8/9.
+ * Correct `block` display not defined for `details` or `summary` in IE 10/11
+ * and Firefox.
+ * Correct `block` display not defined for `main` in IE 11.
+ */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section,
+summary {
+  display: block;
+}
+
+/**
+ * 1. Correct `inline-block` display not defined in IE 8/9.
+ * 2. Normalize vertical alignment of `progress` in Chrome, Firefox, and Opera.
+ */
+audio,
+canvas,
+progress,
+video {
+  display: inline-block;
+  /* 1 */
+  vertical-align: baseline;
+  /* 2 */
+}
+
+/**
+ * Prevent modern browsers from displaying `audio` without controls.
+ * Remove excess height in iOS 5 devices.
+ */
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+/**
+ * Address `[hidden]` styling not present in IE 8/9/10.
+ * Hide the `template` element in IE 8/9/11, Safari, and Firefox < 22.
+ */
+[hidden],
+template {
+  display: none;
+}
+
+/* Links
+   ========================================================================== */
+/**
+ * Remove the gray background color from active links in IE 10.
+ */
+a {
+  background-color: transparent;
+}
+
+/**
+ * Improve readability when focused and also mouse hovered in all browsers.
+ */
+a:active,
+a:hover {
+  outline: 0;
+}
+
+/* Text-level semantics
+   ========================================================================== */
+/**
+ * Address styling not present in IE 8/9/10/11, Safari, and Chrome.
+ */
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+
+/**
+ * Address style set to `bolder` in Firefox 4+, Safari, and Chrome.
+ */
+b,
+strong {
+  font-weight: bold;
+}
+
+/**
+ * Address styling not present in Safari and Chrome.
+ */
+dfn {
+  font-style: italic;
+}
+
+/**
+ * Address variable `h1` font-size and margin within `section` and `article`
+ * contexts in Firefox 4+, Safari, and Chrome.
+ */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+/**
+ * Address styling not present in IE 8/9.
+ */
+mark {
+  background: #ff0;
+  color: #000;
+}
+
+/**
+ * Address inconsistent and variable font size in all browsers.
+ */
+small {
+  font-size: 80%;
+}
+
+/**
+ * Prevent `sub` and `sup` affecting `line-height` in all browsers.
+ */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sup {
+  top: -0.5em;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+/* Embedded content
+   ========================================================================== */
+/**
+ * Remove border when inside `a` element in IE 8/9/10.
+ */
+img {
+  border: 0;
+}
+
+/**
+ * Correct overflow not hidden in IE 9/10/11.
+ */
+svg:not(:root) {
+  overflow: hidden;
+}
+
+/* Grouping content
+   ========================================================================== */
+/**
+ * Address margin not present in IE 8/9 and Safari.
+ */
+figure {
+  margin: 1em 40px;
+}
+
+/**
+ * Address differences between Firefox and other browsers.
+ */
+hr {
+  box-sizing: content-box;
+  height: 0;
+}
+
+/**
+ * Contain overflow in all browsers.
+ */
+pre {
+  overflow: auto;
+}
+
+/**
+ * Address odd `em`-unit font size rendering in all browsers.
+ */
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+
+/* Forms
+   ========================================================================== */
+/**
+ * Known limitation: by default, Chrome and Safari on OS X allow very limited
+ * styling of `select`, unless a `border` property is set.
+ */
+/**
+ * 1. Correct color not being inherited.
+ *    Known issue: affects color of disabled elements.
+ * 2. Correct font properties not being inherited.
+ * 3. Address margins set differently in Firefox 4+, Safari, and Chrome.
+ */
+button,
+input,
+optgroup,
+select,
+textarea {
+  color: inherit;
+  /* 1 */
+  font: inherit;
+  /* 2 */
+  margin: 0;
+  /* 3 */
+}
+
+/**
+ * Address `overflow` set to `hidden` in IE 8/9/10/11.
+ */
+button {
+  overflow: visible;
+}
+
+/**
+ * Address inconsistent `text-transform` inheritance for `button` and `select`.
+ * All other form control elements do not inherit `text-transform` values.
+ * Correct `button` style inheritance in Firefox, IE 8/9/10/11, and Opera.
+ * Correct `select` style inheritance in Firefox.
+ */
+button,
+select {
+  text-transform: none;
+}
+
+/**
+ * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
+ *    and `video` controls.
+ * 2. Correct inability to style clickable `input` types in iOS.
+ * 3. Improve usability and consistency of cursor style between image-type
+ *    `input` and others.
+ */
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  /* 2 */
+  cursor: pointer;
+  /* 3 */
+}
+
+/**
+ * Re-set default cursor for disabled elements.
+ */
+button[disabled],
+html input[disabled] {
+  cursor: default;
+}
+
+/**
+ * Remove inner padding and border in Firefox 4+.
+ */
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+/**
+ * Address Firefox 4+ setting `line-height` on `input` using `!important` in
+ * the UA stylesheet.
+ */
+input {
+  line-height: normal;
+}
+
+/**
+ * It's recommended that you don't attempt to style these elements.
+ * Firefox's implementation doesn't respect box-sizing, padding, or width.
+ *
+ * 1. Address box sizing set to `content-box` in IE 8/9/10.
+ * 2. Remove excess padding in IE 8/9/10.
+ */
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+}
+
+/**
+ * Fix the cursor style for Chrome's increment/decrement buttons. For certain
+ * `font-size` values of the `input`, it causes the cursor style of the
+ * decrement button to change from `default` to `text`.
+ */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/**
+ * 1. Address `appearance` set to `searchfield` in Safari and Chrome.
+ * 2. Address `box-sizing` set to `border-box` in Safari and Chrome
+ *    (include `-moz` to future-proof).
+ */
+input[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  /* 2 */
+  box-sizing: content-box;
+}
+
+/**
+ * Remove inner padding and search cancel button in Safari and Chrome on OS X.
+ * Safari (but not Chrome) clips the cancel button when the search input has
+ * padding (and `textfield` appearance).
+ */
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+ * Define consistent border, margin, and padding.
+ */
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+
+/**
+ * 1. Correct `color` not being inherited in IE 8/9/10/11.
+ * 2. Remove padding so people aren't caught out if they zero out fieldsets.
+ */
+legend {
+  border: 0;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+}
+
+/**
+ * Remove default vertical scrollbar in IE 8/9/10/11.
+ */
+textarea {
+  overflow: auto;
+}
+
+/**
+ * Don't inherit the `font-weight` (applied by a rule above).
+ * NOTE: the default cannot safely be changed in Chrome and Safari on OS X.
+ */
+optgroup {
+  font-weight: bold;
+}
+
+/* Tables
+   ========================================================================== */
+/**
+ * Remove most spacing between table cells.
+ */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+td,
+th {
+  padding: 0;
+}
+
+/**
+ *
+ * Take any drupal view formatted as Unformatted or HTML List and apply a 3 column grid layout
+ *
+ * $wrapper-name: The immediate div name above view-content and views-row
+ *
+ * $number-items: The number of items in the grid
+ *
+ * Future Plans:
+ * Make a variable column version
+ *
+ */
+/**
+ *
+ * This method returns the content wrapped in the requested media query. It also checks to see if
+ * the no-query variable has been defined. If the variable exists the content is output and wrapped
+ * in a class as defined by the variable.
+ *
+ * The $no-query defined class is to wrap content in when there are no media queries available for
+ * the current browser. This is typically provided by a javascript plugin like modernizr.
+ *
+ * $bp: The breakpoint in pixels
+ *
+ * $no-ie: To override this breakpoint and not use it in browsers that don't support media queries
+ * pass true as the second argument.
+ *
+ */
+.tabs:before, .hero-nav:before, .hero-text:before, .jobs-wrapper:before, .partners-wrapper .partners-list:before, .footer-wrapper .footer-list .footer-social-list:before, .clearfix:before, .tabs:after, .hero-nav:after, .hero-text:after, .jobs-wrapper:after, .partners-wrapper .partners-list:after, .footer-wrapper .footer-list .footer-social-list:after, .clearfix:after {
+  content: "";
+  display: table;
+}
+.tabs:after, .hero-nav:after, .hero-text:after, .jobs-wrapper:after, .partners-wrapper .partners-list:after, .footer-wrapper .footer-list .footer-social-list:after, .clearfix:after {
+  clear: both;
+}
+
+.skip-link, .visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+body, p, h2 {
+  font-family: "futura-pt",sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h3 {
+  font-family: "futura-pt",sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  -webkit-font-smoothing: antialiased;
+}
+
+h4 {
+  font-family: "futura-pt",sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  -webkit-font-smoothing: antialiased;
+}
+
+.skip-link:focus, .bold {
+  font-weight: 900;
+}
+
+.footer-wrapper .footer-list .footer-social-list .footer-social-list-item.facebook:after, .footer-wrapper .footer-list .footer-social-list .footer-social-list-item.twitter:after, .footer-wrapper .footer-list .footer-social-list .footer-social-list-item.linkedin:after {
+  font-family: 'icon';
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  speak: none;
+}
+
+.footer-wrapper .footer-list .footer-social-list .footer-social-list-item.facebook:after {
+  content: "\e605";
+}
+
+.footer-wrapper .footer-list .footer-social-list .footer-social-list-item.twitter:after {
+  content: "\e604";
+}
+
+.footer-wrapper .footer-list .footer-social-list .footer-social-list-item.linkedin:after {
+  content: "\e603";
+}
+
+#admin-menu {
+  z-index: 9999;
+}
+#admin-menu a {
+  -webkit-font-smoothing: subpixel-antialiased;
+}
+
+.tabs {
+  border-bottom: solid 2px #999;
+  margin-bottom: 1em;
+}
+.tabs li {
+  float: left;
+  margin-right: 2px;
+  margin-bottom: 0;
+}
+.tabs li a {
+  display: block;
+  padding: 0.5em 1em;
+  background-color: #999;
+  color: #fff;
+  text-decoration: none;
+}
+.tabs li a:hover, .tabs li a:focus {
+  background-color: #333;
+}
+
+.skip-link:focus {
+  clip: auto;
+  overflow: visible;
+  position: static;
+  display: block;
+  padding-top: .5em;
+  padding-bottom: .5em;
+  margin: auto;
+  width: 100%;
+  height: auto;
+  text-align: center;
+  text-transform: uppercase;
+  color: white;
+}
+
+.burger img {
+  width: 20px;
+  display: inline;
+  float: right;
+}
+
+.share img {
+  width: 20px;
+  display: inline;
+  float: left;
+}
+
+.hero-nav .hero-nav-list {
+  width: 100%;
+  float: left;
+  margin-left: 0;
+  margin-right: 0;
+}
+.hero-nav .hero-nav-list .hero-nav-share-item {
+  display: none;
+}
+.hero-nav .hero-nav-list .hero-nav-burger-item {
+  display: none;
+}
+.hero-nav .hero-nav-list .hero-nav-list-item {
+  display: inline;
+  width: 49.15254%;
+  float: left;
+}
+.hero-nav .hero-nav-list .hero-nav-list-item.burger {
+  width: 49.15254%;
+  float: right;
+}
+
+.hero-wrapper {
+  background-image: url(http://bit.ly/1LhSy7O);
+  background-size: cover;
+  padding: 3em;
+}
+
+.hero-logo {
+  margin: 8em;
+}
+
+.hero-text h1 {
+  width: 49.15254%;
+  float: left;
+}
+
+.hero-buttons-list .hero-buttons-list-item {
+  display: inline;
+  border: solid 1px #fff;
+  padding: 1em;
+  text-transform: uppercase;
+}
+
+.hero-navigation {
+  margin: 3em 0 0 0;
+}
+.hero-navigation .hero-navigation-list .hero-navigation-list-item {
+  display: inline;
+}
+
+.jobs-wrapper {
+  background-image: url(http://www.hdwallpapers.in/walls/curious_kittens-wide.jpg);
+  background-size: cover;
+  color: #ffffff;
+  height: 500px;
+  padding: 0 3em;
+}
+.jobs-wrapper .jobs-text-wrapper {
+  width: 15.25424%;
+  float: left;
+  position: relative;
+  z-index: 1;
+}
+.jobs-wrapper .jobs-text-wrapper .jobs-button a {
+  padding: 1em;
+  color: #ffffff;
+  border: solid 1px #ffffff;
+}
+.jobs-wrapper .jobs-overlay {
+  position: absolute;
+  left: 0;
+}
+.jobs-wrapper .polygon {
+  fill: #9c9cc1;
+}
+
+.who-wrapper .who-list .who-list-item {
+  width: 32.20339%;
+  float: left;
+  border: solid 1px #d7d7d7;
+}
+.who-wrapper .who-list .who-list-item.last {
+  width: 32.20339%;
+  float: left;
+}
+
+.partners-wrapper .partners-list .partners-list-item {
+  width: 15.25424%;
+  float: left;
+}
+
+.footer-wrapper {
+  margin: 2em 0;
+  border-top: solid 1px #d7d7d7;
+}
+.footer-wrapper .footer-list .footer-list-item {
+  width: 74.57627%;
+  float: right;
+}
+.footer-wrapper .footer-list .footer-list-item.social {
+  width: 23.72881%;
+  float: left;
+}
+.footer-wrapper .footer-list .footer-social-list .footer-social-list-item {
+  display: inline;
+  float: left;
+  padding: 1em;
+  font-size: 20px;
+  font-size: 1.25rem;
+}
+.footer-wrapper .footer-list .footer-social-list .footer-social-list-item.facebook:after {
+  color: #3b5998;
+}
+.footer-wrapper .footer-list .footer-social-list .footer-social-list-item.twitter:after {
+  color: #55acee;
+}
+.footer-wrapper .footer-list .footer-social-list .footer-social-list-item.linkedin:after {
+  color: #0077b5;
+}
+.footer-wrapper .footer-list .footer-copyright {
+  margin: 1em;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+img[style*="float:left"] {
+  margin-right: 1em;
+  margin-bottom: 1em;
+}
+img[style*="float:right"] {
+  margin-left: 1em;
+  margin-bottom: 1em;
+}
+
+@font-face {
+  font-family: 'icon';
+  src: url("../fonts/gai.eot");
+  src: url("../fonts/gai.eot?#iefix") format("embedded-opentype"), url("../fonts/gai.woff") format("woff"), url("../fonts/gai.ttf") format("truetype"), url("../fonts/gai.svg#icon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+html {
+  font-size: 100%;
+  line-height: 1.4;
+}
+
+*:focus {
+  outline: dotted 2px #000000;
+}
+
+a {
+  color: #000000;
+  text-decoration: none;
+}
+a:hover, a:focus {
+  text-decoration: underline;
+}
+a:focus {
+  outline: dotted 2px #000000;
+}
+
+.movie-wrapper {
+  overflow: hidden;
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  margin-bottom: 2em;
+}
+.movie-wrapper iframe {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  font-size: 16pxpx;
+  font-size: 1pxrem;
+}
+
+.container {
+  max-width: 100%;
+  margin-left: 20px;
+  margin-right: 20px;
+  height: 100%;
+  text-align: center;
+  background-color: #fff;
+}
+.container:after {
+  content: " ";
+  display: block;
+  clear: both;
+}
+@media (min-width: 31.25em) {
+  .container {
+    max-width: 1280px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .container:after {
+    content: " ";
+    display: block;
+    clear: both;
+  }
+}
+.no-mediaqueries .container {
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.no-mediaqueries .container:after {
+  content: " ";
+  display: block;
+  clear: both;
+}
+
+li {
+  list-style: none;
+}
+
+ul {
+  padding: 0;
+}
+
+p {
+  font-size: 20px;
+  font-size: 1.25rem;
+  line-height: 1.5;
+}
+
+h1 {
+  font-size: 36px;
+  font-size: 2.25rem;
+}
+
+h2 {
+  font-size: 48px;
+  font-size: 3rem;
+}
+
+h3 {
+  font-size: 20px;
+  font-size: 1.25rem;
+}
+
+h4 {
+  font-size: 20px;
+  font-size: 1.25rem;
+}
+
+.all-caps {
+  text-transform: uppercase;
+}
+
+/*# sourceMappingURL=style.css.map */

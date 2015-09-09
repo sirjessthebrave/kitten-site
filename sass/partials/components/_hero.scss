@@ -1,0 +1,35 @@
+.hero-wrapper {
+  background-image: url(http://bit.ly/1LhSy7O);
+  background-size: cover;
+  padding: 3em;
+}
+
+.hero-logo{
+  margin: 8em
+}//.hero-logo
+
+.hero-text {
+  @extend %clearfix;
+  h1 {
+    @include span(6 of 12)
+
+  }//h2
+}//hero-text
+
+.hero-buttons-list {
+  .hero-buttons-list-item {
+    display: inline;
+    border: solid 1px #fff;
+    padding: 1em;
+    text-transform: uppercase;
+  }//.hero-buttons-list-item
+}//.hero-buttons-list 
+
+.hero-navigation {
+  margin: 3em 0 0 0;
+  .hero-navigation-list {
+    .hero-navigation-list-item {
+      display: inline;
+    }// .hero-navigation-list-item
+  }//.hero-navigation-list 
+}//.hero-navigation
