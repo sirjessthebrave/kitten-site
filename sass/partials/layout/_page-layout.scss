@@ -1,10 +1,10 @@
-
+   
 body {
   @include fontsize (16px);
   @extend %sans-serif;
 }
 
-.container {
+.container { 
   @include container($mobile);
     height: 100%;
     text-align: center;
