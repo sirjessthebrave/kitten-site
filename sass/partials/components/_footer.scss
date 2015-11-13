@@ -1,0 +1,40 @@
+.footer-wrapper {
+  margin: 2em 0;
+  border-top: solid 1px $border-gray;
+
+  .footer-list {
+    .footer-list-item{
+      @include span(9 of 12 last);
+      &.social {
+        @include span(3 of 12);
+      }
+    }//.footer-list-item
+
+    .footer-social-list {
+      @extend %clearfix;
+      .footer-social-list-item {
+        display: inline;
+        float: left;
+        padding: 1em;
+        @include fontsize(20);
+
+       &.facebook:after{
+          @extend %facebook;
+          color: $facebook-blue; 
+        }//.facebook
+        &.twitter:after {
+          @extend %twitter;
+          color: $twitter-blue; 
+        }//.twitter
+        &.linkedin:after { 
+          @extend %linkedin;
+          color: $linkedin-blue; 
+        }//.linkedin
+      }//.footer-social-list-item
+    }//.footer-social-list
+
+    .footer-copyright {
+      margin: 1em;
+    }//.footer-copyright
+  }// .footer-list 
+}//.footer-wrapper

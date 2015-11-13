@@ -1,0 +1,8 @@
+.partners-wrapper {
+  .partners-list {
+    @extend %clearfix;
+    .partners-list-item {
+      @include span(2 of 12);
+    }//.partners-list-item
+  }//.partners-list 
+}//.partners-wrapper

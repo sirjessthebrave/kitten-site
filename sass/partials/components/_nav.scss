@@ -1,0 +1,38 @@
+.burger img {
+  width: 20px; 
+  display: inline;
+    float: right;
+}
+.share img {
+  width: 20px; 
+  display: inline;
+    float: left;
+}
+
+.hero-nav {
+
+}//hero-nav
+
+.hero-nav {
+  @extend %clearfix;
+  .hero-nav-list {
+    @include span(12 of 12);
+
+  .hero-nav-share-item {
+    display: none;
+  }//.hero-nav-share-item 
+
+  .hero-nav-burger-item {
+    display: none;
+  }//.hero-nav-share-item 
+
+    .hero-nav-list-item{
+      display: inline;
+      @include span(6 of 12 no-gutter);
+
+      &.burger {
+        @include span(6 of 12 last);
+      }
+    }//hero-nav-list-item
+  }//hero-nav-list
+}//hero-nav

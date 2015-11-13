@@ -1,0 +1,12 @@
+.who-wrapper {
+  .who-list {
+    .who-list-item {
+      @include span(4 of 12);
+      border: solid 1px $border-gray;
+
+      &.last {
+        @include span(4 of 12);
+      }
+    }//.who-list-item
+  }//.who-list 
+}//.who-wrapper
